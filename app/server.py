@@ -8,11 +8,10 @@ from io import BytesIO
 from fastai import *
 from fastai.vision import *
 
-# export_file_url = 'https://www.dropbox.com/s/v6cuuvddq73d1e0/export.pkl?raw=1'
-export_file_url = 'https://drive.google.com/uc?export=download&id=1yjoeq9m6Nb6QL80a5EmSfzDaZi3Gi8rj'
-export_file_name = 'bears_model.pkl'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1PwPKmscpwnor8DLKEQbgt75f0VK6AgFj'
+export_file_name = 'currencies.pkl'
 
-classes = ['black', 'grizzly', 'teddys']
+classes = ['10', '100', '200', '2000', '50']
 path = Path(__file__).parent
 
 app = Starlette()
