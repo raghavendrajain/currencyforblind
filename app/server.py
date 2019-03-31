@@ -9,10 +9,10 @@ from fastai import *
 from fastai.vision import *
 
 # export_file_url = 'https://drive.google.com/uc?export=download&id=1PwPKmscpwnor8DLKEQbgt75f0VK6AgFj'
-export_file_url = 'https://drive.google.com/uc?export=download&id=1efHX6henloDZHXmDkYZDH3ZGV__iiwDd'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1DpM-c1wDJF_xO6__Q0zeEheZ7pjvokTW'
 export_file_name = 'new_currency_model.pkl'
 
-classes = ['10', '100', '200', '2000', '50']
+classes = ['10', '100', '20', '200', '2000', '50', "500"]
 path = Path(__file__).parent
 
 app = Starlette()
