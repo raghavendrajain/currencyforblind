@@ -9,8 +9,8 @@ from fastai import *
 from fastai.vision import *
 
 # export_file_url = 'https://drive.google.com/uc?export=download&id=1PwPKmscpwnor8DLKEQbgt75f0VK6AgFj'
-export_file_url = ''https://drive.google.com/uc?export=download&id=1efHX6henloDZHXmDkYZDH3ZGV__iiwDd'
-export_file_name = 'currencies.pkl'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1efHX6henloDZHXmDkYZDH3ZGV__iiwDd'
+export_file_name = 'new_currency_model.pkl'
 
 classes = ['10', '100', '200', '2000', '50']
 path = Path(__file__).parent
