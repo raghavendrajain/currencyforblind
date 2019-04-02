@@ -25,7 +25,7 @@ function analyze() {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
             el('result-label').innerHTML = `Result = ${response['result']}`;
-            var msg = new SpeechSynthesisUtterance('These are '.concat(result, ' rupees')
+            var msg = new SpeechSynthesisUtterance('These are '.concat(result, ' rupees'));
             window.speechSynthesis.speak(msg);
         }
         el('analyze-button').innerHTML = 'Analyze';
