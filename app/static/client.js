@@ -1,3 +1,5 @@
+.import "https://code.responsivevoice.org/responsivevoice.js" as voice
+
 var el = x => document.getElementById(x);
 
 function showPicker(inputId) { el('file-input').click(); }
@@ -26,22 +28,9 @@ function analyze() {
             var response = JSON.parse(e.target.responseText);
             el('result-label').innerHTML = `These are ${response['result']} rupees`;
             
-            
             // ==================
-            
-            var resources = ["https://code.responsivevoice.org/responsivevoice.js", "https://code.jquery.com/jquery-2.1.4.min.js"];
-            
-            for(var i = 0; i < resources.length; i++){
-                var script = document.createElement("script");
-                script.setAttribute("type", "text/javascript");
-                script.setAttribute("src", resources[i]);
-                document.getElementsByTagName("head")[0].appendChild(script);
-            }
-
-            responsiveVoice.speak("These are " + ${response['result']} + " rupees", "US English Female");
-           
+            voice.responsiveVoice.speak("These are " + ${response['result']} + " rupees", "US English Female");
             // ==================
-            
             
         }
         el('analyze-button').innerHTML = 'Analyze';
