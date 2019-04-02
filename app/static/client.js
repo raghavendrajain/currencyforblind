@@ -25,6 +25,8 @@ function analyze() {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
             el('result-label').innerHTML = `These are ${response['result']} rupees`;
+            
+            responsiveVoice.speak("These are " + ${response['result']} + " rupees", "US English Female");
         }
         el('analyze-button').innerHTML = 'Analyze';
     }

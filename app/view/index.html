@@ -28,27 +28,7 @@
                 <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
             </div>
             <div class='analyze'>
-                <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
-                <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-                <button id='analyze-button' class='analyze-button' type='button' onclick='analyzeIt(); readIt();'>Analyze</button>
-                
-                <script>
-                    analysisComplete = false;
-                    
-                    function analyzeIt() {
-                        analyze();
-                        analysisComplete = true;
-                    }
-                    function readIt() {
-                        if(analysisComplete) {
-                            responsiveVoice.speak($('#result-label').text(), "US English Female");
-                        } else {
-                            setTimeout(readIt, 2000);
-                        }
-                    }
-                </script>
-                
-                
+                <button id='analyze-button' class='analyze-button' type='button' onclick='analyze();'>Analyze</button>
             </div>
             <div class='result-label'>
                 <label id='result-label'></label>
