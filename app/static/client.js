@@ -1,5 +1,3 @@
-.import "https://code.responsivevoice.org/responsivevoice.js" as voice
-
 var el = x => document.getElementById(x);
 
 function showPicker(inputId) { el('file-input').click(); }
@@ -29,7 +27,8 @@ function analyze() {
             el('result-label').innerHTML = `These are ${response['result']} rupees`;
             
             // ==================
-            voice.responsiveVoice.speak("These are " + ${response['result']} + " rupees", "US English Female");
+            import "https://code.responsivevoice.org/responsivevoice.js" as responsiveVoice
+            responsiveVoice.speak("These are " + ${response['result']} + " rupees", "US English Female");
             // ==================
             
         }
