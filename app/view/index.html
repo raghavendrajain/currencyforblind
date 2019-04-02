@@ -30,12 +30,21 @@
             <div class='analyze'>
                 <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
                 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-                <button id='analyze-button' class='analyze-button' type='button' onclick='analyzeAndRead()'>Analyze</button>
+                <button id='analyze-button' class='analyze-button' type='button' onclick='analyzeIt(); readIt();'>Analyze</button>
                 
                 <script>
-                    function analyzeAndRead() {
+                    analysisComplete = false;
+                    
+                    function analyzeIt() {
                         analyze();
-                        responsiveVoice.speak($('#result-label').text(), "US English Female");
+                        analysisComplete = true;
+                    }
+                    function readIt() {
+                        if(analysisComplete) {
+                            responsiveVoice.speak($('#result-label').text(), "US English Female");
+                        } else {
+                            setTimeout(readIt, 2000);
+                        }
                     }
                 </script>
                 
