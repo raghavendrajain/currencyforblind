@@ -1,3 +1,5 @@
+import responsiveVoice from 'https://code.responsivevoice.org/responsivevoice.js'
+
 var el = x => document.getElementById(x);
 
 function showPicker(inputId) { el('file-input').click(); }
@@ -24,13 +26,9 @@ function analyze() {
     xhr.onload = function(e) {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
-            el('result-label').innerHTML = `These are ${response['result']} rupees`;
+            el('result-label').innerHTML = `These are ${response["result"]} rupees`;
             
-            // ==================
-            import "https://code.responsivevoice.org/responsivevoice.js" as responsiveVoice
-            responsiveVoice.speak("These are " + ${response['result']} + " rupees", "US English Female");
-            // ==================
-            
+            responsiveVoice.speak("These are many rupees", "US English Female");
         }
         el('analyze-button').innerHTML = 'Analyze';
     }
@@ -39,4 +37,3 @@ function analyze() {
     fileData.append('file', uploadFiles[0]);
     xhr.send(fileData);
 }
-
