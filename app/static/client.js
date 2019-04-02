@@ -24,9 +24,12 @@ function analyze() {
     xhr.onload = function(e) {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
-            el('result-label').innerHTML = `Result = ${response['result']}`;
-            var msg = new SpeechSynthesisUtterance('These are '.concat(${response['result']}, ' rupees'));
-            window.speechSynthesis.speak(msg);
+            // el('result-label').innerHTML = `Result = ${response['result']}`;
+            // var msg = new SpeechSynthesisUtterance('These are '.concat(${response['result']}, ' rupees'));
+            // window.speechSynthesis.speak(msg);
+            
+            el('result-label').innerHTML = `These are ${response['result']} rupees`;
+            
         }
         el('analyze-button').innerHTML = 'Analyze';
     }
