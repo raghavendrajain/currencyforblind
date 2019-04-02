@@ -34,28 +34,6 @@
                 <label id='result-label'></label>
             </div>
             
-            <div>
-                <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
-                <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-                <select id="voiceselection"></select> 
-
-                <input 
-                  onclick="responsiveVoice.speak($('#result-label').text(),$('#voiceselection').val());" 
-                  type="button" 
-                  value="Play" 
-                />
-
-                <script>
-                        //Populate voice selection dropdown
-                        var voicelist = responsiveVoice.getVoices();
-                        var vselect = $("#voiceselection");
-                        $.each(voicelist, function() {
-                                vselect.append($("<option />").val(this.name).text(this.name));
-                        });
-                </script>
-            </div>
-            
         </div>
     </div>
 </div>
